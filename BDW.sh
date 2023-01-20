@@ -142,8 +142,8 @@ Download_BaiduPCS_Web(){
 	else
 		bit="arm64"
 	fi
-	#wget -N --no-check-certificate "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/v${BaiduPCS_Web_new_ver}/BaiduPCS-Go-v${BaiduPCS_Web_new_ver}-linux-${bit}.zip"
-	wget -N --no-check-certificate "https://toolwa.com/github/qjfoidnh/BaiduPCS-Go/releases/download/v${BaiduPCS_Web_new_ver}/BaiduPCS-Go-v${BaiduPCS_Web_new_ver}-linux-${bit}.zip"
+	wget -N --no-check-certificate "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/v${BaiduPCS_Web_new_ver}/BaiduPCS-Go-v${BaiduPCS_Web_new_ver}-linux-${bit}.zip"
+	#wget -N --no-check-certificate "https://toolwa.com/github/qjfoidnh/BaiduPCS-Go/releases/download/v${BaiduPCS_Web_new_ver}/BaiduPCS-Go-v${BaiduPCS_Web_new_ver}-linux-${bit}.zip"
 	BaiduPCS_Web_Name="BaiduPCS-Go-${BaiduPCS_Web_new_ver}-linux-${bit}"
 	[[ ! -s ${BaiduPCS_Web_Name}.zip ]] && echo -e "${Error} BaiduPCS-Web 压缩包下载失败 !" && exit 1
 	unzip ${BaiduPCS_Web_Name}.zip
