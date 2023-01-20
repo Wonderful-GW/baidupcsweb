@@ -146,7 +146,8 @@ Download_BaiduPCS_Web(){
 	fi
 	#wget -N --no-check-certificate "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/v${BaiduPCS_Web_new_ver}/BaiduPCS-Go-v${BaiduPCS_Web_new_ver}-linux-${bit}.zip"
 	wget -N --no-check-certificate "https://dl0.serctl.com/downloads8/2023-01-21-01-31-27-BaiduPCS-Go-BaiduPCS-Go-v3.9.0-linux-arm.zip"
-	BaiduPCS_Web_Name="BaiduPCS-Go-${BaiduPCS_Web_new_ver}-linux-${bit}"
+	BaiduPCS_Web_Name="2023-01-21-01-31-27-BaiduPCS-Go-BaiduPCS-Go-v3.9.0-linux-arm"
+	#BaiduPCS_Web_Name="BaiduPCS-Go-${BaiduPCS_Web_new_ver}-linux-${bit}"
 	[[ ! -s ${BaiduPCS_Web_Name}.zip ]] && echo -e "${Error} BaiduPCS-Web 压缩包下载失败 !" && exit 1
 	unzip ${BaiduPCS_Web_Name}.zip
 	[[ ! -e "/usr/local/${BaiduPCS_Web_Name}" ]] && echo -e "${Error} BaiduPCS-Web 解压失败 !" && rm -rf ${BaiduPCS_Web_Name}.zip && exit 1
