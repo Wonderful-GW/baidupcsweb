@@ -79,12 +79,12 @@ Set_BaiduPCS_port(){
 }
 
 check_new_ver(){
-	echo -e "${Info} 请输入 BaiduPCS-Web 版本号，格式如：[ 3.5.9 ]，获取地址：[ https://github.com/liuzhuoling2011/baidupcs-web/releases ]"
+	echo -e "${Info} 请输入 BaiduPCS-Web 版本号，格式如：[ 3.5.9 ]，获取地址：[ https://github.com/qjfoidnh/BaiduPCS-Go/releases ]"
 	read -e -p "默认回车自动获取最新版本号:" BaiduPCS_Web_new_ver
 	if [[ -z ${BaiduPCS_Web_new_ver} ]]; then
-		BaiduPCS_Web_new_ver="$(curl -H 'Cache-Control: no-cache' -s "https://api.github.com/repos/liuzhuoling2011/BaiduPCS-Web/releases/latest" | grep 'tag_name' | cut -d\" -f4)"
+		BaiduPCS_Web_new_ver="$(curl -H 'Cache-Control: no-cache' -s "https://api.github.com/repos/qjfoidnh/BaiduPCS-Go/releases/latest" | grep 'tag_name' | cut -d\" -f4)"
 		if [[ -z ${BaiduPCS_Web_new_ver} ]]; then
-			echo -e "${Error} BaiduPCS-Web 最新版本获取失败，请手动获取最新版本号[ https://github.com/liuzhuoling2011/baidupcs-web/releases ]"
+			echo -e "${Error} BaiduPCS-Web 最新版本获取失败，请手动获取最新版本号[ https://github.com/qjfoidnh/BaiduPCS-Go/releases ]"
 			read -e -p "请输入版本号 [ 格式如 3.5.9 ] :" BaiduPCS_Web_new_ver
 			[[ -z "${BaiduPCS_Web_new_ver}" ]] && echo "取消..." && exit 1
 		else
@@ -164,7 +164,7 @@ Download_BaiduPCS_Web(){
 ## 以后再修改
 Service_BaiduPCS_Web(){
 	if [[ ${release} = "centos" ]]; then
-		if ! wget --no-check-certificate https://raw.githubusercontent.com/user1121114685/baidupcsweb/master/BaiduPCSWeb_centos -O /etc/init.d/BaiduPCSWeb; then
+		if ! wget --no-check-certificate https://raw.githubusercontent.com/Wonderful-GW/baidupcsweb/master/BaiduPCSWeb_centos -O /etc/init.d/BaiduPCSWeb; then
 			echo -e "${Error} BaiduPCS-Web服务 管理脚本下载失败 !" && exit 1
 		fi
 		Download_BaiduPCS_port
@@ -172,7 +172,7 @@ Service_BaiduPCS_Web(){
 		chkconfig --add BaiduPCSWeb
 		chkconfig BaiduPCSWeb on
 	else
-		if ! wget --no-check-certificate https://raw.githubusercontent.com/user1121114685/baidupcsweb/master/BaiduPCSWeb_debian -O /etc/init.d/BaiduPCSWeb; then
+		if ! wget --no-check-certificate https://raw.githubusercontent.com/Wonderful-GW/baidupcsweb/master/BaiduPCSWeb_debian -O /etc/init.d/BaiduPCSWeb; then
 			echo -e "${Error} BaiduPCS-Web服务 管理脚本下载失败 !" && exit 1
 		fi
 		Download_BaiduPCS_port
@@ -183,7 +183,7 @@ Service_BaiduPCS_Web(){
 }
 
 Download_BaiduPCS_port(){
-	if ! wget --no-check-certificate https://raw.githubusercontent.com/user1121114685/baidupcsweb/master/port -O "${Folder}/port"; then
+	if ! wget --no-check-certificate https://raw.githubusercontent.com/Wonderful-GW/baidupcsweb/master/port -O "${Folder}/port"; then
 		echo -e "${Error} BaiduPCS-Web服务 prot下载失败 !" && exit 1
 	fi
 	echo -e "成功下载port文件..."
@@ -300,7 +300,7 @@ Update_Shell(){
 		echo
 		echo -e " $green 咦...发现新版本耶....正在拼命更新.......$none"
 		echo
-		wget -N --no-check-certificate "https://raw.githubusercontent.com/user1121114685/baidupcsweb/master/BDW.sh" && chmod +x BDW.sh
+		wget -N --no-check-certificate "https://raw.githubusercontent.com/Wonderful-GW/baidupcsweb/master/BDW.sh" && chmod +x BDW.sh
 		echo -e "脚本已更新为最新版本[ ${sh_new_ver} ] !(注意：因为更新方式为直接覆盖当前运行的脚本，所以可能下面会提示一些报错，无视即可)" && exit 0
 	fi
 }
