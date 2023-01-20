@@ -280,7 +280,7 @@ UnInstall_BaiduPCS_Web(){
 
 
 Update_Shell(){
-	local latest_version=$(curl -H 'Cache-Control: no-cache' -s -L "https://raw.githubusercontent.com/user1121114685/baidupcsweb/master/BDW.sh" | grep 'sh_ver' -m1 | cut -d\" -f2)
+	local latest_version=$(curl -H 'Cache-Control: no-cache' -s -L "https://raw.githubusercontent.com/Wonderful-GW/baidupcsweb/master/BDW.sh" | grep 'sh_ver' -m1 | cut -d\" -f2)
 	if [[ ! $latest_version ]]; then
 		echo
 		echo -e " $red获取 BaiduPCS_Web 最新版本失败!!!$none"
