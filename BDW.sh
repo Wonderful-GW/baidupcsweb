@@ -144,7 +144,6 @@ Download_BaiduPCS_Web(){
 	else
 		bit="arm64"
 	fi
-	bit="arm"
 	wget -N --no-check-certificate "https://github.com/qjfoidnh/BaiduPCS-Go/releases/download/v${BaiduPCS_Web_new_ver}/BaiduPCS-Go-v${BaiduPCS_Web_new_ver}-linux-${bit}.zip"
 	#wget -N --no-check-certificate "https://toolwa.com/github/qjfoidnh/BaiduPCS-Go/releases/download/v${BaiduPCS_Web_new_ver}/BaiduPCS-Go-v${BaiduPCS_Web_new_ver}-linux-${bit}.zip"
 	BaiduPCS_Web_Name="BaiduPCS-Go-${BaiduPCS_Web_new_ver}-linux-${bit}"
