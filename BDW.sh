@@ -139,6 +139,8 @@ Download_BaiduPCS_Web(){
 		bit="amd64"
 	elif [[ ${bit} == "i386" || ${bit} == "i686" ]]; then
 		bit="86"
+	elif [[ ${bit} == "armv6l" || ${'getconf LONG_BIT'} == "32" ]]; then
+		bit="86"
 	else
 		bit="arm64"
 	fi
