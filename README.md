@@ -1,4 +1,4 @@
-# baidupcs-web 项目地址 https://github.com/liuzhuoling2011/baidupcs-web
+# baidupcs-web 项目地址 [https://github.com/liuzhuoling2011/baidupcs-web](https://github.com/qjfoidnh/BaiduPCS-Go)
 ## 使用方法
 ` wget -N --no-check-certificate "https://raw.githubusercontent.com/Wonderful-GW/baidupcsweb/master/BDW.sh" && chmod +x BDW.sh && bash BDW.sh`
 
